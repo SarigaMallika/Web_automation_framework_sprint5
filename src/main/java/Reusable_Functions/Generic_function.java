@@ -64,8 +64,8 @@ public class Generic_function {
 		driver = new ChromeDriver(options);
 		driver.navigate().to(getURL());	
 		driver.manage().window().maximize();
-		click("broweser_launch_advance");
-		click("broweser_launch_proceed");
+		//click("broweser_launch_advance");
+		//click("broweser_launch_proceed");
 	}
 	
 	
@@ -78,8 +78,8 @@ public class Generic_function {
 		 driver =new ChromeDriver();
 		 driver.navigate().to(getURL());
 		 driver.manage().window().maximize();
-		 click("broweser_launch_advance");
-			click("broweser_launch_proceed");
+		 //click("broweser_launch_advance");
+		 //click("broweser_launch_proceed");
 		 ((JavascriptExecutor)driver).executeScript("window.open()");
 		    ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 		    driver.switchTo().window(tabs.get(1));
