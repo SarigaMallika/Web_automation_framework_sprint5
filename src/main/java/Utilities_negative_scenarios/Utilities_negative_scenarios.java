@@ -192,10 +192,11 @@ public class Utilities_negative_scenarios  extends Generic_function{
 			click_javascript("award_points");
 			browser_wait(20);
 			value=driver.findElement(By.xpath(OR_reader("Object_Locator", "awardpoints_redeem_button"))).isEnabled();
-			if(value==true) {
+			System.out.println(value);
+			if(value==false) {
 				Thread.sleep(1000);
-				click("awardpoints_redeem_button");				
-	}
+				click("awardpoints_redeem_button");	
+			}
 			else
 			{
 				browser_back();
@@ -205,8 +206,4 @@ public class Utilities_negative_scenarios  extends Generic_function{
 		}catch (Exception e) {
 			takeScreenShot("utilities_negative_tc_006");
 		}	
-	}
-		
-
-	
 }
