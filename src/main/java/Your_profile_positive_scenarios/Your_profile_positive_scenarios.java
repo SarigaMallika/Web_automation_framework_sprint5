@@ -24,7 +24,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 		}
 	}
 
-	/*TC 001 - Validate that the  'Your Profile’ title  should be present in  Your Profile screen */
+	/*TC 001 - Validate that the  'Your Profileâ€™ title  should be present in  Your Profile screen */
 	@Then("check Your Profile  title  should be present in  Your Profile screen")
 	public void yourprofile_positive_tc_001() throws Exception  {
 		try {
@@ -42,6 +42,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			browser_wait(5);
 			value = driver.findElement(By.xpath(OR_reader("Object_Locator", "your_profile_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
+			System.out.println("1");
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_001");
@@ -66,6 +67,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			click("profile_verify");
 			browser_wait(5);
 			click("tab_ok");
+			System.out.println("2");
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_002");
@@ -98,6 +100,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			browser_wait(10);
 			click("profile_save");
 			click("tab_ok");
+			System.out.println("3");
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_003");
@@ -119,6 +122,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 //			browser_wait(10);
 //			driver.findElement(By.xpath(OR_reader("Object_locator", "profile_email"))).sendKeys(td_reader("profile_email",2));
 //			click("profile_submit");
+			System.out.println("4");
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_004");
@@ -144,6 +148,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			drop_down(OR_reader("Object_Locator", "profile_mail_list"),text); 
 			click("profile_yes");
 			click("tab_ok");
+			System.out.println("5");
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_005");
@@ -156,13 +161,14 @@ public class Your_profile_positive_scenarios extends Generic_function{
 
 		try {
 			click("profile_phno");
-			//click("profile_plus");
-			//value = driver.findElement(By.xpath(OR_reader("Object_Locator", "profile_add_phone_title"))).isDisplayed();
-			//Assert.assertEquals(true,value);
-			//driver.findElement(By.xpath(OR_reader("Object_locator", "profile_phonenumber"))).sendKeys(td_reader("profile_phonenumber"));
-			//click("profile_submit");
-			//driver.findElement(By.xpath(OR_reader("Object_locator", "profile_phno_code"))).sendKeys(td_reader("otp"));
-			//click("profile_phno_verify");
+//			click("profile_plus");
+//			value = driver.findElement(By.xpath(OR_reader("Object_Locator", "profile_add_phone_title"))).isDisplayed();
+//			Assert.assertEquals(true,value);
+//			driver.findElement(By.xpath(OR_reader("Object_locator", "profile_phonenumber"))).sendKeys(td_reader("profile_phonenumber"));
+//			click("profile_submit");
+//			driver.findElement(By.xpath(OR_reader("Object_locator", "profile_phno_code"))).sendKeys(td_reader("otp"));
+//			click("profile_phno_verify");
+			System.out.println("6");
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_006");
@@ -178,13 +184,14 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			value = driver.findElement(By.xpath(OR_reader("Object_Locator", "profile_contact_assert"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			click("profile_contact_assert");
-//			click("profile_dot_phno");
-//			browser_wait(10);
-//			text = td_reader("profile_dot");
-//			drop_down(OR_reader("Object_Locator", "profile_phno_list"),text); 
-//			click("profile_yes");
-//			click("profile_phno_activate");
-//			click("profile_yes");
+			click("profile_dot_phno");
+			browser_wait(10);
+			text = td_reader("profile_dot");
+			drop_down(OR_reader("Object_Locator", "profile_phno_list"),text); 
+			click("profile_yes");
+			click("profile_phno_activate");
+			click("profile_yes");
+			System.out.println("7");
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_007");
@@ -192,7 +199,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 
 	}
 
-	/*TC 008 - Validate that the user is able to Activate , Edit and  Deactivate the Phone Number */
+	/*TC 008 - Validate that the User is able to add Address in contact details. */
 	@Then("User is able to add Address in contact details.")
 	public void yourprofile_positive_tc_008() throws Exception {
 		try {
@@ -209,6 +216,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			//selectdrop_down("profile_state",text);
 			//driver.findElement(By.xpath(OR_reader("Object_locator", "profile_zip"))).sendKeys(td_reader("profile_zip"));
 			//click("profile_save");
+			System.out.println("8");
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_008");
@@ -233,6 +241,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			drop_down(OR_reader("Object_Locator", "profile_address_list"),text);
 			click("profile_yes");
 			click("profile_address_back");
+			System.out.println("9");
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_009");
@@ -262,6 +271,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			//driver.findElement(By.xpath(OR_reader("Object_locator", "profile_plan_type"))).sendKeys(td_reader("profile_plan_holderlname"));
 			//click("profile_plan_save");
 			//click("tab_ok");
+			System.out.println("10");
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_010");
@@ -281,6 +291,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			browser_wait(10);
 			text = td_reader("profile_dot");
 			drop_down(OR_reader("Object_Locator", "profile_plan_list"),text);
+			System.out.println("11");
 		}
 		catch(StaleElementReferenceException e){
 			driver.findElement(By.xpath(OR_reader("Object_Locator", "profile_plan_activate"))).click();
@@ -305,6 +316,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			driver.findElement(By.xpath(OR_reader("Object_locator", "profile_confirm_password"))).sendKeys(td_reader("profile_newpassword"));
 			click("profile_passwordsave");
 			click("tab_ok");
+			System.out.println("12");
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_012");
@@ -361,6 +373,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			click("tab_ok");
 			System.out.println("Your profile positive");
 			driverquit();
+			System.out.println("13");
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_013");
@@ -369,4 +382,3 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	}
 
 }
-
