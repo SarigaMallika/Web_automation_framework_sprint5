@@ -67,6 +67,7 @@ public class Homepage_positive_scenarios extends Generic_function {
 		try {
 			click("request_second_opinion_button");
 			click("create_new_case");
+			Thread.sleep(2000);
                value1=driver.findElement(By.xpath(OR_reader("Object_Locator", "request_second_opinion_title"))).isDisplayed();
 				Assert.assertEquals(true,value1);
 				Thread.sleep(2000);
