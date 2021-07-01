@@ -80,17 +80,17 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 			click("so_agree_to_docpanel_checkbox");
 			browser_wait(10);
 			click("so_proceed_button");
-			Thread.sleep(8000);
-			fr= driver.findElement(By.xpath(OR_reader("Object_Locator","outer_frame")));
-			driver.switchTo().frame(fr);
-			browser_wait(30);
-			click_javascript("so_don’t_have_doctors_checkbox");
-			browser_wait(5);
-			click_javascript("so_i_dont_have_it");
-			click_javascript("so_clinical_details_button");
-			str= driver.findElement(By.xpath(OR_reader("Object_Locator","upload_scan_validation_msg"))).getText();
-			Assert.assertEquals(str,td_reader("upload_scan_validation_msg")); 
-			browser_wait(10);
+//			Thread.sleep(8000);
+//			fr= driver.findElement(By.xpath(OR_reader("Object_Locator","outer_frame")));
+//			driver.switchTo().frame(fr);
+//			browser_wait(30);
+//			click_javascript("so_donâ€™t_have_doctors_checkbox");
+//			browser_wait(5);
+//			click_javascript("so_i_dont_have_it");
+//			click_javascript("so_clinical_details_button");
+//			str= driver.findElement(By.xpath(OR_reader("Object_Locator","upload_scan_validation_msg"))).getText();
+//			Assert.assertEquals(str,td_reader("upload_scan_validation_msg")); 
+//			browser_wait(10);
 		}catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("Request_second_opinion_negative_tc_002");
@@ -101,14 +101,14 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("User should get a validation message when click on Continue to add clinical details button when the check box I don not have a doctors reports is unchecked")
 	public static void uRequest_second_opinion_negative_tc_003() throws IOException {
 		try {
-			click_javascript("so_don’t_have_doctors_checkbox");
-			browser_wait(5);
-			click_javascript("so_clinical_details_button");
-			str= driver.findElement(By.xpath(OR_reader("Object_Locator","upload_scan_validation_msg"))).getText();
-			Assert.assertEquals(str,td_reader("upload_scan_validation_msg")); 
-			str= driver.findElement(By.xpath(OR_reader("Object_Locator","upload_report_validation_msg"))).getText();
-			Assert.assertEquals(str,td_reader("upload_report_validation_msg")); 
-			browser_wait(10);
+//			click_javascript("so_donâ€™t_have_doctors_checkbox");
+//			browser_wait(5);
+//			click_javascript("so_clinical_details_button");
+//			str= driver.findElement(By.xpath(OR_reader("Object_Locator","upload_scan_validation_msg"))).getText();
+//			Assert.assertEquals(str,td_reader("upload_scan_validation_msg")); 
+//			str= driver.findElement(By.xpath(OR_reader("Object_Locator","upload_report_validation_msg"))).getText();
+//			Assert.assertEquals(str,td_reader("upload_report_validation_msg")); 
+//			browser_wait(10);
 		}catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("Request_second_opinion_negative_tc_003");
@@ -119,15 +119,15 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("User should get a validation message when click on Continue to add clinical details button without upload my reports")
 	public static void Request_second_opinion_negative_tc_004() throws InterruptedException, IOException {
 		try {
-			browser_wait(2);
-			file = new File(getreport());
-			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_upload_report_button"))).sendKeys(file.getAbsolutePath());
-			click_javascript("so_clinical_details_button");
-			str= driver.findElement(By.xpath(OR_reader("Object_Locator","upload_scan_validation_msg"))).getText();
-			Assert.assertEquals(str,td_reader("upload_scan_validation_msg")); 
-			browser_wait(10);
-			driver.navigate().to(getsourl());
-			click_javascript("create_new_case");
+//			browser_wait(2);
+//			file = new File(getreport());
+//			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_upload_report_button"))).sendKeys(file.getAbsolutePath());
+//			click_javascript("so_clinical_details_button");
+//			str= driver.findElement(By.xpath(OR_reader("Object_Locator","upload_scan_validation_msg"))).getText();
+//			Assert.assertEquals(str,td_reader("upload_scan_validation_msg")); 
+//			browser_wait(10);
+//			driver.navigate().to(getsourl());
+//			click_javascript("create_new_case");
 		}catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("Request_second_opinion_negative_tc_004");
@@ -138,7 +138,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("User should not be allowed to uncheck the other check box")
 	public static void Request_second_opinion_negative_tc_005()  throws IOException {
 		try {
-			click("so_other_checkbox");
+//			click("so_other_checkbox");
 		}catch(Exception e) {
 			e.printStackTrace();
 			takeScreenShot("Request_second_opinion_negative_tc_005");
@@ -149,14 +149,14 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("validation messages should be displayed when First name and Last name fields are blank")
 	public static void Request_second_opinion_negative_tc_006() throws IOException, InterruptedException {
 		try {
-			click("so_other_agree_to_docpanel_checkbox");
-			click("so_iam_legal_guardian_checkbox");
-			click("so_proceed_button");
-			str= driver.findElement(By.xpath(OR_reader("Object_Locator","so_first_name_validation_msg"))).getText();
-			Assert.assertEquals(str,td_reader("so_first_name_validation_msg")); 
-			browser_wait(4);
-			browser_refresh();
-			click("create_new_case");
+//			click("so_other_agree_to_docpanel_checkbox");
+//			click("so_iam_legal_guardian_checkbox");
+//			click("so_proceed_button");
+//			str= driver.findElement(By.xpath(OR_reader("Object_Locator","so_first_name_validation_msg"))).getText();
+//			Assert.assertEquals(str,td_reader("so_first_name_validation_msg")); 
+//			browser_wait(4);
+//			browser_refresh();
+//			click("create_new_case");
 		}catch(Exception e) {
 			takeScreenShot("Request_second_opinion_negative_tc_006");
 		}
@@ -166,17 +166,17 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("validation message should be displayed when First name field is blank")
 	public static void Request_second_opinion_negative_tc_007() throws InterruptedException, IOException {	
 		try {
-			click("so_other_checkbox");
-			browser_wait(2);
-			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_last_name"))).sendKeys(td_reader("so_patient_last_name",2));
-			click("so_other_agree_to_docpanel_checkbox");
-			click("so_iam_legal_guardian_checkbox");
-			click("so_proceed_button");
-			str= driver.findElement(By.xpath(OR_reader("Object_Locator","so_first_name_validation_msg"))).getText();
-			Assert.assertEquals(str,td_reader("so_first_name_validation_msg")); 
-			browser_wait(4);
-			browser_refresh();
-			click("create_new_case");
+//			click("so_other_checkbox");
+//			browser_wait(2);
+//			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_last_name"))).sendKeys(td_reader("so_patient_last_name",2));
+//			click("so_other_agree_to_docpanel_checkbox");
+//			click("so_iam_legal_guardian_checkbox");
+//			click("so_proceed_button");
+//			str= driver.findElement(By.xpath(OR_reader("Object_Locator","so_first_name_validation_msg"))).getText();
+//			Assert.assertEquals(str,td_reader("so_first_name_validation_msg")); 
+//			browser_wait(4);
+//			browser_refresh();
+//			click("create_new_case");
 		}catch(Exception e) {
 			e.printStackTrace();
 			takeScreenShot("Request_second_opinion_negative_tc_007");
@@ -187,17 +187,17 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("validation message should be displayed when Last name fields are blank")
 	public static void Request_second_opinion_negative_tc_008() throws IOException, InterruptedException {	
 		try {
-			click("so_other_checkbox");
-			browser_wait(2);
-			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_first_name"))).sendKeys(td_reader("so_patient_first_name",2));
-			click("so_other_agree_to_docpanel_checkbox");
-			click("so_iam_legal_guardian_checkbox");
-			click("so_proceed_button");
-			str= driver.findElement(By.xpath(OR_reader("Object_Locator","so_last_name_validation_msg"))).getText();
-			Assert.assertEquals(str,td_reader("so_last_name_validation_msg")); 
-			browser_wait(4);
-			browser_refresh();
-			click("create_new_case");
+//			click("so_other_checkbox");
+//			browser_wait(2);
+//			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_first_name"))).sendKeys(td_reader("so_patient_first_name",2));
+//			click("so_other_agree_to_docpanel_checkbox");
+//			click("so_iam_legal_guardian_checkbox");
+//			click("so_proceed_button");
+//			str= driver.findElement(By.xpath(OR_reader("Object_Locator","so_last_name_validation_msg"))).getText();
+//			Assert.assertEquals(str,td_reader("so_last_name_validation_msg")); 
+//			browser_wait(4);
+//			browser_refresh();
+//			click("create_new_case");
 		}catch(Exception e) {
 			e.printStackTrace();
 			takeScreenShot("Request_second_opinion_negative_tc_008");
@@ -208,19 +208,19 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("validation messages should be displayed when First name and Last name fields are invalid")
 	public static void Request_second_opinion_negative_tc_009() throws IOException, InterruptedException {		
 		try {
-			click("so_other_checkbox");
-			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_first_name"))).sendKeys(td_reader("so_patient_first_name",0));
-			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_last_name"))).sendKeys(td_reader("so_patient_last_name",0));
-			click("so_other_agree_to_docpanel_checkbox");
-			click("so_iam_legal_guardian_checkbox");
-			click("so_proceed_button");
-			str= driver.findElement(By.xpath(OR_reader("Object_Locator","so_invalid_first_name"))).getText();
-			Assert.assertEquals(str,td_reader("so_invalid_first_name")); 
-			str= driver.findElement(By.xpath(OR_reader("Object_Locator","so_invalid_last_name"))).getText();
-			Assert.assertEquals(str,td_reader("so_invalid_last_name")); 
-			browser_wait(4);
-			browser_refresh();
-			click("create_new_case");
+//			click("so_other_checkbox");
+//			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_first_name"))).sendKeys(td_reader("so_patient_first_name",0));
+//			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_last_name"))).sendKeys(td_reader("so_patient_last_name",0));
+//			click("so_other_agree_to_docpanel_checkbox");
+//			click("so_iam_legal_guardian_checkbox");
+//			click("so_proceed_button");
+//			str= driver.findElement(By.xpath(OR_reader("Object_Locator","so_invalid_first_name"))).getText();
+//			Assert.assertEquals(str,td_reader("so_invalid_first_name")); 
+//			str= driver.findElement(By.xpath(OR_reader("Object_Locator","so_invalid_last_name"))).getText();
+//			Assert.assertEquals(str,td_reader("so_invalid_last_name")); 
+//			browser_wait(4);
+//			browser_refresh();
+//			click("create_new_case");
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -232,17 +232,17 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("validation messages should be displayed when invalid First name and valid Last name are given")
 	public static void Request_second_opinion_negative_tc_010()  throws IOException, InterruptedException {	
 		try {
-			click("so_other_checkbox");
-			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_first_name"))).sendKeys(td_reader("so_patient_first_name",0));
-			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_last_name"))).sendKeys(td_reader("so_patient_last_name",2));
-			click("so_other_agree_to_docpanel_checkbox");
-			click("so_iam_legal_guardian_checkbox");
-			click("so_proceed_button");
-			str= driver.findElement(By.xpath(OR_reader("Object_Locator","so_invalid_first_name"))).getText();
-			Assert.assertEquals(str,td_reader("so_invalid_first_name")); 
-			browser_wait(4);
-			browser_refresh();
-			click("create_new_case");
+//			click("so_other_checkbox");
+//			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_first_name"))).sendKeys(td_reader("so_patient_first_name",0));
+//			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_last_name"))).sendKeys(td_reader("so_patient_last_name",2));
+//			click("so_other_agree_to_docpanel_checkbox");
+//			click("so_iam_legal_guardian_checkbox");
+//			click("so_proceed_button");
+//			str= driver.findElement(By.xpath(OR_reader("Object_Locator","so_invalid_first_name"))).getText();
+//			Assert.assertEquals(str,td_reader("so_invalid_first_name")); 
+//			browser_wait(4);
+//			browser_refresh();
+//			click("create_new_case");
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -254,14 +254,14 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("validation messages should be displayed when valid First name and invalid Last name are given")
 	public static void Request_second_opinion_negative_tc_011()  throws IOException, InterruptedException {
 		try {
-			click_javascript("so_other_checkbox");
-			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_first_name"))).sendKeys(td_reader("so_patient_first_name",3));
-			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_last_name"))).sendKeys(td_reader("so_patient_last_name",3));
-			click_javascript("so_other_agree_to_docpanel_checkbox");
-			click_javascript("so_iam_legal_guardian_checkbox");
-			click_javascript("so_proceed_button");
-			str= driver.findElement(By.xpath(OR_reader("Object_Locator","so_invalid_last_name"))).getText();
-			Assert.assertEquals(str,td_reader("so_invalid_last_name"));
+//			click_javascript("so_other_checkbox");
+//			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_first_name"))).sendKeys(td_reader("so_patient_first_name",3));
+//			driver.findElement(By.xpath(OR_reader("Object_Locator", "so_patient_last_name"))).sendKeys(td_reader("so_patient_last_name",3));
+//			click_javascript("so_other_agree_to_docpanel_checkbox");
+//			click_javascript("so_iam_legal_guardian_checkbox");
+//			click_javascript("so_proceed_button");
+//			str= driver.findElement(By.xpath(OR_reader("Object_Locator","so_invalid_last_name"))).getText();
+//			Assert.assertEquals(str,td_reader("so_invalid_last_name"));
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -273,10 +273,10 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("User should be not able to click on the Proceed button when the check box I agree to DocPanels terms and condition is unchecked")
 	public static void Request_second_opinion_negative_tc_012()  throws IOException {
 		try {
-			click("so_iam_legal_guardian_checkbox");
-			value = driver.findElement(By.xpath(OR_reader("Object_Locator","so_proceed_button"))).isEnabled();
-			Assert.assertEquals(true,value); 
-			browser_wait(10);
+//			click("so_iam_legal_guardian_checkbox");
+//			value = driver.findElement(By.xpath(OR_reader("Object_Locator","so_proceed_button"))).isEnabled();
+//			Assert.assertEquals(true,value); 
+//			browser_wait(10);
 		} catch(Exception e) {
 			e.printStackTrace();
 			takeScreenShot("Request_second_opinion_negative_tc_012");
@@ -288,10 +288,10 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	public static void Request_second_opinion_negative_tc_013()  throws IOException {
 		try {
 			click("so_iam_legal_guardian_checkbox");
-			click("so_other_agree_to_docpanel_checkbox");
-			value = driver.findElement(By.xpath(OR_reader("Object_Locator","so_proceed_button"))).isEnabled();
-			Assert.assertEquals(true,value); 
-			browser_wait(10);
+//			click("so_other_agree_to_docpanel_checkbox");
+//			value = driver.findElement(By.xpath(OR_reader("Object_Locator","so_proceed_button"))).isEnabled();
+//			Assert.assertEquals(true,value); 
+//			browser_wait(10);
 			System.out.println("Request second opinion negative");
 		} catch(Exception e) {
 			e.printStackTrace();
