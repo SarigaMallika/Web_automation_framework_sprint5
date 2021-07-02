@@ -199,7 +199,7 @@ public class Utilities_negative_scenarios  extends Generic_function{
 			browser_wait(20);
 			value=driver.findElement(By.xpath(OR_reader("Object_Locator", "awardpoints_redeem_button"))).isEnabled();
 			System.out.println(value);
-			if(value==false) {
+			if(value==true) {
 				Thread.sleep(1000);
 				click("awardpoints_redeem_button");	
 			}
